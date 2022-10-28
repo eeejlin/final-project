@@ -1,1 +1,2 @@
-# final-project
+# NASA-datavisual
+Final Project for INST630
