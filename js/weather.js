@@ -9,17 +9,17 @@ $(document).ready(function () {
         success: function (Data) {
             //console.log(Data);
             //Calling
-            fnDrawMultiLineChart(Data, "MarsWeatherChart", "Mars Weather");
+            fnDrawMultiLineChart(Data, "MarsWeatherChart");
         }
     });
 });
 
 // draw chart
-function fnDrawMultiLineChart(Data, DivID, RevenueName) {
+function fnDrawMultiLineChart(Data, DivID) {
     console.log(Data);
-    var margin = { top: 20, right: 80, bottom: 30, left: 50 },
+    var margin = { top: 50, right: 80, bottom: 50, left: 50 },
         width = 800 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        height = 500 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format("%Y-%m-%d");
 
@@ -88,7 +88,8 @@ function fnDrawMultiLineChart(Data, DivID, RevenueName) {
                 "x1": x(xData[0]),
                 "x2": x(xData[xData.length - 1]) + x.rangeBand() / 2,
                 "y1": function (d) { return y(d); },
-                "y2": function (d) { return y(d); }
+                "y2": function (d) { return y(d); },
+                "stroke":"#000"
             });
     // Drawing Y Axis
     svg.append("g")
@@ -101,32 +102,31 @@ function fnDrawMultiLineChart(Data, DivID, RevenueName) {
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .style("font-size", "20px")
-        .text(RevenueName);
 
     svg.append("circle")
         .attr("cx", 120)
-        .attr("cy", -10)
+        .attr("cy", -30)
         .attr("r", 6)
         .style("fill", "rgb(31, 119, 180)")
     svg.append("circle")
         .attr("cx", 300)
-        .attr("cy", -10)
+        .attr("cy", -30)
         .attr("r", 6)
         .style("fill", "rgb(174, 199, 232)")
     svg.append("text")
         .attr("x", 140)
-        .attr("y", -10)
+        .attr("y", -30)
         .text("Highest Temperature")
         .style("font-size", "15px")
         .attr("alignment-baseline", "middle")
-        .style("fill", "rgb(255 255 255 / 60%)")
+        .style("fill", "rgb(256 256 256/ 60%)")
     svg.append("text")
         .attr("x", 320)
-        .attr("y", -10)
+        .attr("y", -30)
         .text("Lowest Temperature")
         .style("font-size", "15px")
         .attr("alignment-baseline", "middle")
-        .style("fill", "rgb(255 255 255 / 60%)")
+        .style("fill", "rgb(256 256 256/ 60%)")
 
     // Drawing Lines for each segments
     var segment = svg.selectAll(".segment")
@@ -156,7 +156,7 @@ function fnDrawMultiLineChart(Data, DivID, RevenueName) {
         .on("mouseover", mouseover)
         .on("mousemove", function (d) {
             divToolTip
-                .text(this.parentNode.__data__.name + " : " + d.value)
+                .text(this.parentNode.__data__.name + "\n" + d.date + " : " + d.value + "° F")
                 .style("left", (d3.event.pageX + 15) + "px")
                 .style("top", (d3.event.pageY - 10) + "px");
         })

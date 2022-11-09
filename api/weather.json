@@ -1,6 +1,6 @@
 [
     {
-        "name": "hightem",
+        "name": "Highest Temperature",
         "WeeklyData": [
             { "date": "2022-10-19", "value": 3.4 },
             { "date": "2022-10-20", "value": 2.3 },
@@ -12,7 +12,7 @@
         ]
     },
     {
-        "name": "lowtem",
+        "name": "Lowest Temperature",
         "WeeklyData": [
             { "date": "2022-10-19", "value": -142.4 },
             { "date": "2022-10-20", "value": -142.4 },

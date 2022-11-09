@@ -8,27 +8,65 @@
     <title>NASA EPIC</title>
     <link rel="stylesheet" href="./style.css">
     <!--basic-->
-    <script src="jquery.min.js"></script>
-    <script src="d3.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body>
-    <div id="MarsWeatherChart"></div>
-    <div id="surroundings">
-        <!-- <div id="circle-out">
-            <div id="inner-circle"></div>
+    <div class="app-container">
+        <div class="app-header">
+            <div class="app-header-left">
+                <img class="app-icon" src="/img/logo.png" alt="logo">
+            </div>
+            <div class="app-header-right">
+            </div>
         </div>
-        <div id="circle-out">
-            <div id="inner-circle"></div>
+        <div class="app-content">
+            <div class="app-sidebar">
+            </div>
+            <div class="projects-section">
+                <div class="projects-section-outer">
+                    <!-- <div class="projects-section-header">
+                        <p>Data</p>
+                    </div>
+                    <div class="projects-section-line">
+                        <div class="projects-status">
+                            <div class="item-status">
+                                <span class="status-number">45</span>
+                                <span class="status-type">In Progress</span>
+                            </div>
+                            <div class="item-status">
+                                <span class="status-number">24</span>
+                                <span class="status-type">Upcoming</span>
+                            </div>
+                            <div class="item-status">
+                                <span class="status-number">62</span>
+                                <span class="status-type">Total Projects</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="project-boxes jsGridView">
+                    <div class="projects-section-header">
+                        <p>Mars Weather</p>
+                        <h6>(Date/Teperature)</h6>
+                    </div>
+                    <div id="MarsWeatherChart"></div>
+                </div>
+                <div class="project-boxes jsGridView">
+                    <div class="projects-section-header">
+                        <p>Relative Position</p>
+                        <h6>(Sun/Moon/Spacecraft)</h6>
+                    </div>
+                    <div id="myDiv"></div>
+                </div>
+            </div>
         </div>
-        <div id="circle-out">
-            <div id="inner-circle"></div>
-        </div> -->
     </div>
 </body>
-
 <!--api-->
-<script src="weather.js"></script>
-<script src="nature.js"></script>
-
+<script src="js/weather.js"></script>
+<script src="js/nature.js"></script>
+<script src="js/position.js"></script>
 </html>
