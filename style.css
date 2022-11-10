@@ -6,12 +6,11 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
   width: 100vw;
-  height: 100vh;
   font: 10px sans-serif;
   font-family: "DM Sans", sans-serif;
-  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -38,17 +37,16 @@ a {
   font-family: "DM Sans", sans-serif;
 }
 .app-content {
-  display: flex;
   height: 100%;
   overflow: hidden;
-  padding: 16px 24px 24px 0;
+  padding: 24px;
 }
 .app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 32px 48px 16px 48px;
+  padding: 30px 48px 0px 48px;
   position: relative;
 }
 .app-header-left,
@@ -104,13 +102,14 @@ a {
 }
 
 .projects-section {
-  flex: 2;
+  display: flex;
   background: linear-gradient(#141e30, #243b55);
   border-radius: 32px;
-  padding: 32px 32px 0 32px;
+  padding: 32px;
   overflow: hidden;
-  height: 100%;
-  display: flex;
+  margin-bottom: 20px;
+  height: auto;
+  justify-content: center;
 }
 .projects-section-line {
   display: flex;
@@ -234,7 +233,7 @@ svg {
   padding: 0.5rem 0rem 0.5rem 1rem;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  margin-right:50px ;
+  margin-right: 50px;
 }
 .grid {
   fill: none;
@@ -256,6 +255,10 @@ div.tooltip {
   background: #ddd;
   border-radius: 3px;
   pointer-events: none;
+}
+
+#MarsWeatherChart {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 980px) {
@@ -367,5 +370,249 @@ div.tooltip {
   .project-boxes.jsListView .more-wrapper {
     right: 2px;
     top: 10px;
+  }
+}
+
+/* planet */
+
+h1 {
+  text-align: center;
+  font-family: Raleway;
+  margin: 40px 0 0 0;
+  color: #fff;
+}
+
+.orbit-container {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height: 800px;
+  left: -700px;
+  top: 120px;
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 100%;
+  border: solid 3px rgba(137, 196, 244, 0.1);
+  transition: 0.2s;
+}
+
+#sun {
+  position: absolute;
+  top: calc(320px - 40px);
+  left: calc(50% - 40.2px);
+  width: 86.434px;
+  height: 86.434px;
+  background: linear-gradient(#fcd670, #f2784b);
+  border-radius: 100%;
+  box-shadow: 0px 0px 8px 8px rgba(242, 120, 75, 0.2);
+  transition: 0.3s;
+}
+
+#mercury-orbit {
+  top: 245px;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  -webkit-animation: spin-right 1.2s linear infinite;
+  animation: spin-right 1.2s linear infinite;
+}
+
+#mercury {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 74px;
+  left: -4px;
+  border-radius: 100%;
+  background: linear-gradient(#fafafa, silver);
+}
+
+#venus-orbit {
+  width: 225px;
+  height: 225px;
+  top: 206px;
+  left: calc(50% - 112.5px);
+  -webkit-animation: spin-right 3.08s linear infinite;
+  animation: spin-right 3.08s linear infinite;
+}
+
+#venus {
+  position: absolute;
+  width: 7.5px;
+  height: 7.5px;
+  top: 100px;
+  left: -5px;
+  border-radius: 100%;
+  background: linear-gradient(#a537fd, #d5b8ff);
+}
+
+#earth-orbit {
+  width: 300px;
+  height: 300px;
+  top: 170px;
+  left: calc(50% - 150px);
+  -webkit-animation: spin-right 5s linear infinite;
+  animation: spin-right 5s linear infinite;
+}
+
+#earth {
+  position: absolute;
+  width: 7.9175px;
+  height: 7.9175px;
+  top: 105px;
+  border-radius: 100%;
+  background: linear-gradient(#19b5fe, #7befb2);
+}
+
+#mars-orbit {
+  width: 375px;
+  height: 375px;
+  top: 135px;
+  left: calc(50% - 187.5px);
+  -webkit-animation: spin-right 9.4s linear infinite;
+  animation: spin-right 9.4s linear infinite;
+}
+
+#mars {
+  position: absolute;
+  top: 120px;
+  left: 9px;
+  width: 4.2123px;
+  height: 4.2123px;
+  border-radius: 100%;
+  background: linear-gradient(#ff9478, #eb974e);
+}
+
+#jupiter-orbit {
+  width: 450px;
+  height: 450px;
+  top: 98px;
+  left: calc(50% - 225px);
+  -webkit-animation: spin-right 60s linear infinite;
+  animation: spin-right 60s linear infinite;
+}
+
+#jupiter {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 145px;
+  border-radius: 100%;
+  background: linear-gradient(#f8c291, #e58e26);
+}
+
+#saturn-orbit {
+  width: 525px;
+  height: 525px;
+  top: 62px;
+  left: calc(50% - 262.5px);
+  -webkit-animation: spin-right 145s linear infinite;
+  animation: spin-right 145s linear infinite;
+}
+
+#saturn,
+#saturn-rings {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 145px;
+  left: 15px;
+  border-radius: 100%;
+  background: linear-gradient(#8d6e63, #ffe0b2);
+}
+
+#saturn-rings {
+  height: 30px;
+  left: 15px;
+  top: 138px;
+  background: rgba(255, 236, 179, 0.25);
+}
+
+#uranus-orbit {
+  width: 600px;
+  height: 600px;
+  top: 25px;
+  left: calc(50% - 300px);
+  -webkit-animation: spin-right 420s linear infinite;
+  animation: spin-right 420s linear infinite;
+}
+
+#uranus {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 220px;
+  border-radius: 100%;
+  background: linear-gradient(#81ecec, #00cec9);
+}
+
+#neptune-orbit {
+  width: 675px;
+  height: 675px;
+  top: -10px;
+  left: calc(50% - 337.5px);
+  -webkit-animation: spin-right 825s linear infinite;
+  animation: spin-right 825s linear infinite;
+}
+
+#neptune {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 270px;
+  left: 0;
+  border-radius: 100%;
+  background: linear-gradient(#74b9ff, #0984e3);
+  -webkit-animation: spin-right 990s linear infinite;
+  animation: spin-right 990s linear infinite;
+}
+
+#planet-list {
+  display: flex;
+  list-style: none;
+  font-family: Raleway;
+  color: white;
+  justify-content: center;
+  padding: 0;
+}
+
+#pluto-orbit {
+  width: 750px;
+  height: 750px;
+  top: -45px;
+  left: calc(50% - 375px);
+  border: dashed 1px rgba(137, 196, 244, 0.1);
+  -webkit-animation: spin-right 1240s linear infinite;
+  animation: spin-right 1240s linear infinite;
+}
+
+#pluto {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 330px;
+  border-radius: 100%;
+  background: linear-gradient(silver, #fafafa);
+}
+
+#planet-list li {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+#planet-list li a {
+  text-decoration: none;
+  color: white;
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
