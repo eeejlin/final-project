@@ -46,7 +46,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 30px 48px 0px 48px;
+  padding: 30px 52px 0px 52px;
   position: relative;
 }
 .app-header-left,
@@ -387,7 +387,7 @@ h1 {
   margin: 0 auto;
   width: 800px;
   height: 800px;
-  left: -700px;
+  left: -650px;
   top: 120px;
 }
 
