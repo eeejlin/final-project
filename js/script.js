@@ -16,14 +16,14 @@ for (let i = 0; i < planets.length; i++) {
 
   $(`#${planet}-link`).hover(function () {
     if (planet !== 'pluto') {
-      $(`#${planet}-orbit`).css({ border: 'solid 3px rgba(137, 196, 244, 0.4)' });
+      $(`#${planet}-orbit`).css({ border: 'solid 4px rgba(137, 196, 244, 0.4)' });
     } else {
       $(`#${planet}-orbit`).css({ border: 'dashed 1px rgba(137, 196, 244, 0.4)' });
     }
 
   }, function () {
     if (planet !== 'pluto') {
-      $(`#${planet}-orbit`).css({ border: 'solid 3px rgba(137, 196, 244, 0.1)' });
+      $(`#${planet}-orbit`).css({ border: 'solid 4px rgba(137, 196, 244, 0.1)' });
     } else {
       $(`#${planet}-orbit`).css({ border: 'dashed 1px rgba(137, 196, 244, 0.1)' });
     }

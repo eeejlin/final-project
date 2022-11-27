@@ -19,7 +19,11 @@ button,
 a {
   cursor: pointer;
 }
-
+h5 {
+  font-size: 18px;
+  font-family: "Teko", sans-serif;
+  margin: 0.5em 0;
+}
 .app-container {
   width: 100%;
   display: flex;
@@ -122,19 +126,29 @@ a {
   color: #fff;
 }
 .projects-section-header p {
-  font-size: 24px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
   line-height: 32px;
   font-weight: 700;
   opacity: 0.9;
   margin: 0;
   color: #fff;
+  float: left;
+  border-bottom: 2px solid #e30613;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 .projects-section-header h6 {
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   opacity: 0.5;
   margin: 0;
+  margin-top: 10px;
   color: #fff;
 }
 
@@ -189,7 +203,8 @@ a {
 }
 
 li {
-  font: 15px sans-serif;
+  font-size: 20px;
+  font-family: "Teko", sans-serif;
 }
 .axis path,
 .axis line,
@@ -387,8 +402,8 @@ h1 {
   margin: 0 auto;
   width: 800px;
   height: 800px;
-  left: -650px;
-  top: 120px;
+  left: -400px;
+  top: 150px;
 }
 
 .orbit {
@@ -605,6 +620,10 @@ h1 {
 #planet-list li a {
   text-decoration: none;
   color: white;
+}
+.intro div {
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
 }
 
 @-webkit-keyframes spin-right {

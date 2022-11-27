@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NASA EPIC</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <!--basic-->
     <script src="js/jquery.min.js"></script>
@@ -25,7 +27,9 @@
         <div class="app-content">
             <div class="projects-section">
                 <div class="projects-section-header">
-                    <p>Solar System</p>
+                    <div class="clearfix">
+                        <p>Solar System</p>
+                    </div>
                     <ul id="planet-list">
                         <li id="sun-link">
                             <a href="#sun">Sun</a>
@@ -53,9 +57,6 @@
                         </li>
                         <li id="neptune-link">
                             <a href="#neptune">Neptune</a>
-                        </li>
-                        <li id="pluto-link">
-                            <a href="#pluto">Pluto</a>
                         </li>
                     </ul>
                 </div>
@@ -86,43 +87,83 @@
                     <div id="neptune-orbit" class="orbit">
                         <div id="neptune"></div>
                     </div>
-                    <div id="pluto-orbit" class="orbit">
-                        <div id="pluto"></div>
+                </div>
+                <div class="projects-section-header">
+                    <div class="clearfix">
+                        <p>Introduction</p>
+                    </div>
+                    <div id="sun-intro" class="intro">
+                        <div id="isun"></div>
+                    </div>
+                    <div id="mercury-intro" class="intro">
+                        <h5>Mercury</h5>
+                        <div id="imercury">The smallest planet in our solar system and nearest to the Sun. From the surface of Mercury, the Sun would appear
+                            more than three times as large as it does when viewed from Earth, and the sunlight would be
+                            as much as seven times brighter. </div>
+                    </div>
+                    <div id="venus-intro" class="intro">
+                        <h5>Venus</h5>
+                        <div id="ivenus">Venus is the second planet from the Sun. It’s often called
+                            Earth’s twin because it’s similar in size and density. Venus has a thick, toxic
+                            atmosphere filled with carbon dioxide and it’s perpetually shrouded in thick, yellowish
+                            clouds of sulfuric acid that trap heat, causing a greenhouse effect. It’s the
+                            hottest planet in our solar system. </div>
+                    </div>
+                    <div id="earth-intro" class="intro">
+                        <h5>Earth</h5>
+                        <div id="iearth">Earth is the third planet from the Sun, and the only place we know of
+                            so far that’s inhabited by living things. While Earth is only the fifth largest planet in the
+                            solar system, it is the only world in our solar system with liquid water on the surface. </div>
+                    </div>
+                    <div id="mars-intro" class="intro">
+                        <h5>Mars</h5>
+                        <div id="imars">​Mars is the fourth planet from the Sun – a dusty, cold, desert world with a
+                            very thin atmosphere. Mars is also a dynamic planet with seasons, polar ice caps, canyons,
+                            extinct volcanoes, and evidence that it was even more active in the past.</div>
+                    </div>
+                    <div id="jupiter-intro" class="intro">
+                        <h5>Jupiter</h5>
+                        <div id="ijupiter">Jupiter is, by far, the largest
+                            planet in the solar system – more than twice as massive as all the other planets combined.
+                            Jupiter's familiar stripes and swirls are actually cold, windy clouds of ammonia and water,
+                            floating in an atmosphere of hydrogen and helium.</div>
+                    </div>
+                    <div id="saturn-intro" class="intro">
+                        <h5>Saturn</h5>
+                        <div id="isaturn-rings">Saturn is the sixth planet from the Sun. Adorned with thousands of beautiful ringlets, Saturn is unique
+                            among the planets. It is not the only planet to have rings – made of chunks of ice and rock –
+                            but none are as spectacular or as complicated as Saturn's.</div>
+                    </div>
+                    <div id="uranus-intro" class="intro">
+                        <h5>Uranus</h5>
+                        <div id="iuranus">Uranus is the seventh planet from the Sun, and was discovered in 1781 by astronomer William Herschel, although he originally thought it
+                            was either a comet or a star.​</div>
+                    </div>
+                    <div id="neptune-intro" class="intro">
+                        <h5>Neptune</h5>
+                        <div id="ineptune">Dark, cold, and whipped by supersonic winds, ice giant Neptune is the
+                            eighth and most distant planet in our solar system. Neptune is the only planet in our solar system not visible to the naked eye.</div>
                     </div>
                 </div>
             </div>
             <div class="projects-section">
                 <div class="projects-section-outer">
-                    <!-- <div class="projects-section-header">
-                        <p>Data</p>
-                    </div>
-                    <div class="projects-section-line">
-                        <div class="projects-status">
-                            <div class="item-status">
-                                <span class="status-number">45</span>
-                                <span class="status-type">In Progress</span>
-                            </div>
-                            <div class="item-status">
-                                <span class="status-number">24</span>
-                                <span class="status-type">Upcoming</span>
-                            </div>
-                            <div class="item-status">
-                                <span class="status-number">62</span>
-                                <span class="status-type">Total Projects</span>
-                            </div>
-                        </div>
-                    </div> -->
+
                 </div>
                 <div class="project-boxes jsGridView">
                     <div class="projects-section-header">
-                        <p>Mars Weather</p>
+                        <div class="clearfix">
+                            <p>Mars Weather</p>
+                        </div>
                         <h6>(Date/Teperature)</h6>
                     </div>
                     <div id="MarsWeatherChart"></div>
                 </div>
                 <div class="project-boxes jsGridView">
                     <div class="projects-section-header">
-                        <p>Relative Position</p>
+                        <div class="clearfix">
+                            <p>Relative Position</p>
+                        </div>
                         <h6>(Sun/Moon/Spacecraft)</h6>
                     </div>
                     <div id="myDiv"></div>
